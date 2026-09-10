@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/Ismoilov05/Java-Spring-example-2-microservices-with-postgres-CI-CD-for-it.git'
-            }
-        }
-
         stage('Build User Service') {
             steps {
                 dir('user-service') {
