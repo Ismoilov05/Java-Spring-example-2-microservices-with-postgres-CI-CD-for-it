@@ -20,9 +20,25 @@ pipeline {
         }
 
         stage('Docker Build') {
-            steps {
-                sh 'docker compose build'
-            }
+             steps {
+        sh '''
+            echo "=== Docker version ==="
+            docker version
+
+            echo "=== Docker compose version ==="
+            docker compose version
+
+            echo "=== Docker info ==="
+            docker info
+
+            echo "=== Current directory ==="
+            pwd
+            ls -la
+
+            echo "=== Docker Compose Build ==="
+            docker compose build
+        '''
+    }
         }
     }
 }
