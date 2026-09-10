@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'git@github.com:Ismoilov05/Java-Spring-example-2-microservices-with-postgres-CI-CD-for-it.git'
+                    url: 'https://github.com/Ismoilov05/Java-Spring-example-2-microservices-with-postgres-CI-CD-for-it.git'
             }
         }
 
